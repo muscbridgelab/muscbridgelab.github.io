@@ -70,6 +70,18 @@ p.big {
     max-width: 275px;
 }
 
+.column {
+  float: left;
+  width: 75%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 </style>
 <title>BRIDGE Lab</title>
 </head>
@@ -92,15 +104,16 @@ p.big {
   </p>
   </div>
   </font>
-<div class="abouttext">
+<div class=row>
+  <div class="column">
   <p style="font-family:verdana;text-align::left;" p class="big">
     Brain Imaging Diffusion Group (BRIDGE) Lab is an interdisciplinary lab
     at the Medical University of South Carolina. Our focus is
     diffusion MRI and brain aging. <br>
     <br>
   </p
-</div>
-<div class="sociallinks">
+  </div>
+  <div class="column">
   <div class="images">
     <a href="https://github.com/m-ama" target="_blank">
       <img src="/images/github2.png" alt="M-AMA Github - Home of PyDesigner" margin="3px" width="50" height="50" class="center">
