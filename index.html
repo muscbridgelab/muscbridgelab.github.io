@@ -2,10 +2,25 @@
 <html>
 <head>
 <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .column {
+    float: left;
+    width: 75%;
+    padding: 10px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 div.maintext {
   max-width: 675px;
   margin: auto;
-
 }
 
 a:link {
@@ -22,24 +37,6 @@ a:hover {
 
 a:active {
   color: #bf12a5;
-}
-
-@font-face {
-    font-family: 'san_fredianoregular';
-    src: url('../fonts/san_frediano/san-frediano-regular-webfont.woff2') format('woff2'),
-         url('../fonts/san_frediano/san-frediano-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'emphasis';
-    src: url('../fonts/emphasis/lt_emphasis-webfont.woff2') format('woff2'),
-         url('../fonts/emphasis/lt_emphasis-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
 }
 
 p.big {
@@ -69,19 +66,6 @@ p.big {
     text-align:right;
     max-width: 275px;
 }
-
-.column {
-  float: left;
-  width: 75%;
-  padding: 10px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 </style>
 <title>BRIDGE Lab</title>
 </head>
