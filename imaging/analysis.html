@@ -93,21 +93,53 @@ p.big {
   <hr width="1200" color="#7ed957">
   <img src="images/introtona.jpg" style="float:right;height=10px;" height="250">
   <p style="font-family:verdana;text-align::left;" p class="big">
-    Our lab focuses mostly in diffusion MRI. dMRI is concerned with the movement
-    of water molecules in the brain. You can read more about the details of
-    Diffusion Tensor Image (DTI)
-    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2041910/" target="_blank">here</a>
-    and <a href="https://www.frontiersin.org/articles/10.3389/fnins.2013.00031/full" target="_blank">here</a>,
-    and Diffusion Kurtosis Imaging (DKI)
-    <a href="https://mriquestions.com/diffusion-kurtosis.html" target="_blank">here</a>.
+    <font size="3">
+    Once data is acquired, it needs to be downloaded from the scanner server on
+    which it is temporarily stored. The dicoms will then need to be sorted by sequence type. After
+    converting the dicoms into nifti format, the data will mostly likely need to be preprocessed.
+    For diffusion data, preprocessing involves performing artifact correction and
+    then derivation of parametric maps. For structural data, this involves
+    segmenting the T1 via Freesurfer and segmenting lesions usins LST. These may
+    or may not be necessary for you depending on your data.
     <br>
     <br>
-    Additionally, we typically acquire structural data such as T1 MPRAGE and T2 FLAIR images.
-    You can learn more about those types of sequences <a href="https://case.edu/med/neurology/NR/MRI%20Basics.htm" target="_blank">here</a>.
+    Required Software: Filezilla (or another FTP software), Horos, dicomSort, MRIcoGL, Matlab, PyDesigner, and Freesurfer
+    </font>
     <br>
     <br>
-    It is also a great idea to check out the book <b>Introduction to Neuroimaging
-    Analysis by Jenkinson and Chappell</b> for a general intro to MRI. There are several lab copies available.
+    <ol type="1">
+    <li>Download raw data from CBIHome</li>
+      <ol type="a">
+        <li>Access CBIHome through an FTP client (requires MUSC wifi or VPN)</li>
+          <ul>
+            <li>sftp://cbihome.musc.edu</li>
+            <li>Log in with NETID and PW</li>
+          </ul>
+        <li>Navigate to MRdata folder, then to the folder of the PI of the study,
+        then to the study folder, then click on the ‘upload’ folder.</li>
+        <li>You will see a series of .zip folders, download whichever you need.</li>
+      </ol>
+      <br>
+    <li>Raw data QCing - <b>Always, <u>ALWAYS</u> check your raw data for quality control issues.</b></li>
+      <ol type="a">
+        <li>Unzip the .zip dicom folder</li>
+        <li>Open Horos and drag the entire unzipped dicom folder into the program</li>
+        <li>Select ‘copy the links’</li>
+        <li>Scroll through scans and note QC issues as applicable</li>
+      </ol>
+      <br>
+    <li>Sort and convert raw dicoms</li>
+      <ol type="a">
+        <li>Sort dicoms</li>
+        <li>Convert raw data from dicom to nifty using dcm2niix</li>
+      </ol>
+      <br>
+    <li>dMRI preprocessing</li>
+      <ol type="a">
+        <li>Process with PyDesigner. <a href ="https://pydesigner.readthedocs.io/en/latest/" target="_blank">See PyDesigner documentation.</a>
+      </ol
+    <li>Structural preprocessing</li>
+  </ol>
   </p>
   <hr width="1200" color="#7ed957">
   <div class="row">
