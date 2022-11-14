@@ -123,6 +123,7 @@ p.big {
     </font>
     <br>
     <br>
+    <font size="3">
     Once data is acquired, it needs to be downloaded from the scanner server on
     which it is temporarily stored. The dicoms will then need to be sorted by sequence type. After
     converting the dicoms into nifti format, the data will mostly likely need to be preprocessed.
@@ -132,26 +133,37 @@ p.big {
     or may not be necessary for you depending on your data.
     <br>
     <br>
-    Required Software: Filezilla (or another FTP software), Horos, PyDesigner, dicomSort, MRIcoGL, Matlab, and Freesurfer
+    Required Software: Filezilla (or another FTP software), Horos, dicomSort, MRIcoGL, Matlab, PyDesigner, and Freesurfer
+    </font>
     <br>
     <br>
-    1. Download raw data from CBIHome
-        a. Access CBIHome through an FTP client (requires MUSC wifi or VPN)
-            i. sftp://cbihome.musc.edu
-            ii. Log in with NETID and PW
-        b. Navigate to MRdata folder, then to the folder of the PI of the study,
-        then to the study folder, then click on the ‘upload’ folder.
-        d. You will see a series of .zip folders, download whichever you need.
-    2. Raw data QCing - <b>Always, <u>ALWAYS</u> check your raw data for quality control issues.</b>
-        a. Unzip the .zip dicom folder
-        b. Open Horos and drag the entire unzipped dicom folder into the program
-            i. Select ‘copy the links’
-        c. Scroll through scans and note QC issues as applicable
-    3. Sort and convert raw dicoms
-        a. Sort dicoms
-        b. Convert raw data from dicom to nifty using dcm2niix
-    4. dMRI preprocessing
-    5. Structural preprocessing
+    <ol type="1">
+    <li>Download raw data from CBIHome</li>
+      <ol type="a">
+        <li>Access CBIHome through an FTP client (requires MUSC wifi or VPN)</li>
+          <ul>
+            <li>sftp://cbihome.musc.edu</li>
+            <li>Log in with NETID and PW</li>
+          </ul>
+        <li>Navigate to MRdata folder, then to the folder of the PI of the study,
+        then to the study folder, then click on the ‘upload’ folder.</li>
+        <li>You will see a series of .zip folders, download whichever you need.</li>
+      </ol>
+    <li>Raw data QCing - <b>Always, <u>ALWAYS</u> check your raw data for quality control issues.</b></li>
+      <ol type="a">
+        <li>Unzip the .zip dicom folder</li>
+        <li>Open Horos and drag the entire unzipped dicom folder into the program</li>
+        <li>Select ‘copy the links’</li>
+        <li>Scroll through scans and note QC issues as applicable</li>
+      </ol>
+    <li>Sort and convert raw dicoms</li>
+      <ol type="a">
+        <li>Sort dicoms</li>
+        <li>Convert raw data from dicom to nifty using dcm2niix</li>
+      </ol>
+    <li>dMRI preprocessing</li>
+    <li>Structural preprocessing</li>
+  </ol>
   </p>
   <hr width="1200" color="#7ed957">
   <div class="row">
