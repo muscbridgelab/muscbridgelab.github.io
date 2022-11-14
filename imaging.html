@@ -92,14 +92,35 @@ p.big {
     </div>
   <p style="font-family:verdana;text-align::left;" p class="big">
     <br>
-    This is where imaging and image analysis documentation will be. There will
-    be a general overview of imaging types, with emphasis on dMRI, but also
-    including PET and whatever else we do in the future.
-    <br><br>
-    There will be links to specific pipelines here. Likely starting with how to
-    acquire dMRI data and followed by PyD preprocessing, Freesurfer, and LST,
-    then followed by downstream analyses like DTI-TK, TBSS, etc. Drawn from
-    older BRIDGE documentation.
+    Once data is acquired, it needs to be downloaded from the scanner server on
+    which it is temporarily stored. The dicoms will then need to be sorted. After
+    converting the dicoms into nifti format, the data will mostly likely need to be preprocessed.
+    For diffusion data, preprocessing involves performing artifact correction and
+    then derivation of parametric maps. For structural data, this involves
+    segmenting the T1 via Freesurfer and segmenting lesions usins LST. These may
+    or may not be necessary for you depending on your data.
+    <br>
+    <br>
+    Required Software: Filezilla (or another FTP software), Horos, PyDesigner, dicomSort, MRIcoGL, Matlab, and Freesurfer
+    <br>
+    <br>
+    1. Download raw data from CBIHome
+        a. Access CBIHome through an FTP client (requires MUSC wifi or VPN)
+            i. sftp://cbihome.musc.edu
+            ii. Log in with NETID and PW
+        b. Navigate to MRdata folder, then to the folder of the PI of the study,
+        then to the study folder, then click on the ‘upload’ folder.
+        d. You will see a series of .zip folders, download whichever you need.
+    2. Raw data QCing - <b>Always, <u>ALWAYS</u> check your raw data for quality control issues.</b>
+        a. Unzip the .zip dicom folder
+        b. Open Horos and drag the entire unzipped dicom folder into the program
+            i. Select ‘copy the links’
+        c. Scroll through scans and note QC issues as applicable
+    3. Sort and convert raw dicoms
+        a. Sort dicoms
+        b. Convert raw data from dicom to nifty using dcm2niix
+    4. dMRI preprocessing
+    5. Structural preprocessing
   </p>
   <div class="row">
     <div class="column left">
