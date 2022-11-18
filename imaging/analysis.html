@@ -43,13 +43,10 @@
   </div>
   <p style="font-family:verdana;text-align::left;" p class="big">
     <font size="3">
-    Once data is acquired, it needs to be downloaded from the scanner server on
-    which it is temporarily stored. The dicoms will then need to be sorted by sequence type. After
-    converting the dicoms into nifti format, the data will mostly likely need to be preprocessed.
-    For diffusion data, preprocessing involves performing artifact correction and
-    then derivation of parametric maps. For structural data, this involves
-    segmenting the T1 via Freesurfer and segmenting lesions usins LST. These may
-    or may not be necessary for you depending on your data.
+    Image analysis starts with MRI data acquisiton. Once data is acquired, it needs to be downloaded from the scanner server on
+    which it is temporarily stored. From there, data should be checked for any quality
+    control issues. Finally, dicoms should be sorted, converted to nifti, and then data
+    should be preprocessed.
     <br>
     <br>
     Required Software: Filezilla (or another FTP software), Horos, dicomSort, MRIcoGL, Matlab, PyDesigner, and Freesurfer
