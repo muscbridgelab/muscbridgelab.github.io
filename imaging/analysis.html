@@ -51,41 +51,6 @@
     <br>
     Required Software: Filezilla (or another FTP software), Horos, dicomSort, MRIcoGL, Matlab, PyDesigner, and Freesurfer
     </font>
-    <br>
-    <br>
-    <ol type="1">
-    <li>Download raw data from CBIHome</li>
-      <ol type="a">
-        <li>Access CBIHome through an FTP client (requires MUSC wifi or VPN)</li>
-          <ul>
-            <li>sftp://cbihome.musc.edu</li>
-            <li>Log in with NETID and PW</li>
-          </ul>
-        <li>Navigate to MRdata folder, then to the folder of the PI of the study,
-        then to the study folder, then click on the ‘upload’ folder.</li>
-        <li>You will see a series of .zip folders, download whichever you need.</li>
-      </ol>
-      <br>
-    <li>Raw data QCing - <b>Always, <u>ALWAYS</u> check your raw data for quality control issues.</b></li>
-      <ol type="a">
-        <li>Unzip the .zip dicom folder</li>
-        <li>Open Horos and drag the entire unzipped dicom folder into the program</li>
-        <li>Select ‘copy the links’</li>
-        <li>Scroll through scans and note QC issues as applicable</li>
-      </ol>
-      <br>
-    <li>Sort and convert raw dicoms</li>
-      <ol type="a">
-        <li>Sort dicoms</li>
-        <li>Convert raw data from dicom to nifty using dcm2niix</li>
-      </ol>
-      <br>
-    <li>dMRI preprocessing</li>
-      <ol type="a">
-        <li>Process with PyDesigner. <a href ="https://pydesigner.readthedocs.io/en/latest/" target="_blank">See PyDesigner documentation.</a>
-      </ol
-    <li>Structural preprocessing</li>
-  </ol>
   </p>
 </div>
 </body>
